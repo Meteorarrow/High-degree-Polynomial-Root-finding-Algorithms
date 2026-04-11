@@ -7,7 +7,7 @@
 // Bolzano's Theorem
 double evaluate(double poly[],int d,double x) {
     double result=poly[0];
-    for(int i=1;i<= d;i++) {
+    for(int i=1;i<=d;i++) {
         result=result*x+poly[i];
     }
     return result;
@@ -38,7 +38,7 @@ double bisection(double poly[],int d,double a,double b,double eps,int *steps) {
 double newton(double poly[],int d,double x0,double eps,int*steps) {
     double deriv[MAX_DEGREE];
     for (int i=0;i<d;i++) {
-        deriv[i]=poly[i]*(d - i);
+        deriv[i]=poly[i]*(d-i);
     }
     
     double x=x0;
@@ -74,7 +74,7 @@ int main() {
     }
     printf("\nYour function is: f(x) = ");
     bool first=true;
-    for (int i=0; i<=d;i++) {
+    for (int i=0;i<=d;i++) {
         int power=d-i;
         if (poly[i]==0) continue;
 
@@ -90,7 +90,7 @@ int main() {
     }
     printf("\n");
 
-    double a, b, x0;
+    double a,b,x0;
     printf("\n[Bisection] Enter search interval [a, b]: ");
     scanf("%lf %lf",&a,&b);
     printf("[Newton] Enter initial guess x0: ");
